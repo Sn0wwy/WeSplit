@@ -12,7 +12,7 @@ struct ContentView: View {
         NavigationView {
             Form {
                 Section {
-                    Text("Hello, world!")
+                    Text("Hello!")
                 }
             }
             .navigationTitle("SwiftUI")
