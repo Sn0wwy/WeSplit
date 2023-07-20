@@ -63,12 +63,20 @@ struct ContentView: View {
                     Text("Amount per person")
                 }
                 
-                Section {
-                    Text(totalCost, format: .currency(code: Locale.current.currencyCode ?? "USD"))
-                } header: {
-                    Text("Total Amount")
+                if(tipPercentage == 0) {
+                    Section {
+                        Text(totalCost, format: .currency(code: Locale.current.currencyCode ?? "USD"))
+                            .foregroundColor(.red)
+                    } header: {
+                        Text("Total Amount")
+                    }
+                } else {
+                    Section {
+                        Text(totalCost, format: .currency(code: Locale.current.currencyCode ?? "USD"))
+                    } header: {
+                        Text("Total Amount")
+                    }
                 }
-                
                 
             }
             .navigationTitle("WeSplit")
